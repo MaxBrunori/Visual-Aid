@@ -1,0 +1,189 @@
+.Preferiti .titoloPreferitiContainer {
+    display: inline-flex;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 15.7px;
+}
+
+.Preferiti .titoloPreferitiContainer .titoloPreferiti {
+    color: var(--bianco);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.Preferiti .lstUtenti .utenti {
+    display: inline-flex;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    gap: 27px;
+    margin-bottom: 24px;
+    height: 67px;
+    padding-right: 29px;
+    position: relative;
+}
+
+.Preferiti .lstUtenti .utenti .visualAidPlus {
+    position: absolute;
+    width: 88px;
+    height: 28px;
+    background-color: #232323;
+    top: 15px;
+    left: 28px;
+    color: var(--bianco);
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: 15px;
+    padding: 4px 6px;
+    border: none;
+    display: none;
+}
+
+.Preferiti .lstUtenti .utenti.attivo .visualAidPlus {
+    display: block;
+}
+
+.Preferiti .lstUtenti .utenti.blu .visualAidPlus {
+    box-shadow: inset 0.5px 1px 3px 0px rgb(0 255 240 / 25%), 0 4px 4px 0px rgb(0 0 0 / 25%);
+}
+
+.Preferiti .lstUtenti .utenti.giallo .visualAidPlus {
+    box-shadow: inset 0.5px 1px 3px 0px rgb(255 231 15 / 25%), 0 4px 4px 0px rgb(0 0 0 / 25%);
+}
+
+.Preferiti .lstUtenti .utenti.arancia .visualAidPlus {
+    box-shadow: inset 0.5px 1px 3px 0px rgb(255 92 0 / 25%), 0 4px 4px 0px rgb(0 0 0 / 25%);
+}
+
+
+.Preferiti .lstUtenti .utenti.attivo {
+    height: 210px;
+}
+
+.Preferiti .lstUtenti .utenti.blu {
+    box-shadow: inset 11px -10px 14px 3px rgb(0 255 240 / 36%);
+}
+
+.Preferiti .lstUtenti .utenti.giallo .infoUtenti .nomeUtenti {
+    color: #FFE70F;
+}
+
+.Preferiti .lstUtenti .utenti.giallo {
+    box-shadow: inset 11px -10px 14px 3px rgb(255 231 15 / 36%);
+}
+
+.Preferiti .lstUtenti .utenti.arancia .infoUtenti .nomeUtenti {
+    color: #FF5C00;
+}
+
+.Preferiti .lstUtenti .utenti.arancia {
+    box-shadow: inset 11px -10px 14px 3px rgb(255 92 0 / 36%);
+}
+
+.Preferiti .lstUtenti .utenti.blu .infoUtenti .nomeUtenti {
+    color: var(--primario);
+}
+
+.Preferiti .lstUtenti .imgUtenti {
+    height: 67px;
+    width: 88px;
+    object-fit: cover;
+}
+
+.Preferiti .lstUtenti .utenti.attivo .imgUtenti {
+    height: 210px;
+    width: 145px;
+}
+
+.Preferiti .lstUtenti .utenti .infoUtenti{
+    padding: 6px 0;
+}
+
+.Preferiti .lstUtenti .utenti .infoUtenti .nomeUtenti {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.Preferiti .lstUtenti .utenti .infoUtenti .nomeUtenti.center {
+    padding-top: 14px;
+}
+
+.Preferiti .lstUtenti .utenti.attivo .infoUtenti .nomeUtenti.center{
+    padding-top: 0;
+}
+
+.Preferiti .lstUtenti .utenti .infoUtenti .posizioneUtenti {
+    font-size: 16px;
+    color: var(--bianco);
+}
+
+.Preferiti .lstUtenti .utenti .infoUtenti .titoloInfo {
+    font-size: 12px;
+    font-weight: 300;
+    display: none;
+    margin-top: 14px;
+}
+
+.Preferiti .lstUtenti .utenti.blu .infoUtenti .titoloInfo {
+    color: var(--primario);
+}
+
+.Preferiti .lstUtenti .utenti.giallo .infoUtenti .titoloInfo {
+    color: #FFE70F
+}
+
+.Preferiti .lstUtenti .utenti.arancia .infoUtenti .titoloInfo {
+    color: #FF5C00;
+}
+
+.Preferiti .lstUtenti .utenti .infoUtenti .info {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--bianco);
+    display: none;
+    position: relative;
+}
+
+.Preferiti .lstUtenti .utenti.attivo .infoUtenti .info,
+.Preferiti .lstUtenti .utenti.attivo .infoUtenti .titoloInfo {
+    display: block;
+}
+
+.Preferiti .lstUtenti .utenti .infoUtenti .azioni {
+    position: absolute;
+    bottom: 13px;
+    right: 29px;
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 15.41px;
+    max-width: calc(100% - 203px);
+    width: 100%;
+    display: none;
+}
+
+.Preferiti .lstUtenti .utenti.attivo .infoUtenti .azioni {
+    display: inline-flex;
+}
+
+.Preferiti .lstUtenti .utenti .infoUtenti .azioni .azione{
+    width: 38px;
+    height: 28px;
+    background-color: #232323;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: 15px;
+    padding: 4px 0;
+    border: none;
+}
+
+.Preferiti .lstUtenti .utenti.blu .infoUtenti .azioni .azione {
+    box-shadow: inset 0.5px 1px 3px 0px rgb(0 255 240 / 25%), 0 4px 4px 0px rgb(0 0 0 / 25%);
+}
+
+.Preferiti .lstUtenti .utenti.giallo .infoUtenti .azioni .azione {
+    box-shadow: inset 0.5px 1px 3px 0px rgb(255 231 15 / 25%), 0 4px 4px 0px rgb(0 0 0 / 25%);
+}
+
+.Preferiti .lstUtenti .utenti.arancia .infoUtenti .azioni .azione {
+    box-shadow: inset 0.5px 1px 3px 0px rgb(255 92 0 / 25%), 0 4px 4px 0px rgb(0 0 0 / 25%);
+}

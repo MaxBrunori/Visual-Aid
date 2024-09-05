@@ -1,0 +1,477 @@
+main {
+    padding: 0;
+}
+
+.login .animazione {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.login .animazione .logo {
+    height: 223.3px;
+    width: 225.9px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    opacity: 0;
+    animation-name: animazioneLogo;
+    animation-duration: 1s;
+    transition: 1s;
+    pointer-events: none;
+    z-index: 30;
+}
+
+.login .animazione .cerchio {
+    height: 34.59px;
+    width: 34.59px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bianco);
+    border-radius: 50%;
+    z-index: 20;
+    animation-name: animazioneCerchio;
+    animation-duration: 1.5s;
+    transition: 1.5s;
+}
+
+.login .animazione .ellisse {
+    height: 67.79px;
+    width: 67.79px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0 255 240 / 70%);
+    border-radius: 50%;
+    filter: blur(34px);
+    opacity: 1;
+    z-index: 10;
+    animation-name: animazioneEllisse;
+    animation-duration: 4.5s;
+    transition: 1.5s;
+}
+
+.login .animazione .ellisse2 {
+    height: 67.79px;
+    width: 67.79px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00FFF0;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 11;
+    opacity: 1;
+    animation-name: animazioneEllisse2;
+    animation-duration: 4.5s;
+    transition: 1.5s;
+}
+
+.login .animazione .ellisse3 {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00FFF0;
+    border-radius: 50%;
+    filter: blur(70px);
+    z-index: 12;
+    opacity: 0;
+    animation-name: animazioneEllisse3;
+    animation-duration: 1.5s;
+    transition: 1.5s;
+}
+
+.login .blocchi {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    padding: 10px 9px;
+    gap: 10px;
+}
+
+.login .blocchi .bloccoAnimazione {
+    height: 100%;
+    position: relative;
+}
+
+.login .animazione .nonVendenti {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    box-shadow: inset 0 1px 11.4px 0px rgb(0 255 240), 0 4px 4px 0px rgb(0 0 0 / 25%);
+    animation: animazioneNonVendenti;
+    animation-duration: 4s;
+}
+
+.login .animazione .nonVendenti .contenuto {
+    background-image: url(../img/scan/sfondo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    animation: animazioneContent;
+    animation-duration: 6s;
+    transition: 1s;
+    border-radius: 30px;
+}
+
+.login .animazione .nonVendenti .contenuto .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.login .animazione .nonVendenti .contenuto .info .titolo {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--bianco);
+}
+
+.login .animazione .nonVendenti .lineaNera {
+    position: absolute;
+    width: 0;
+    left: 50%;
+    height: 15px;
+    top: -1px;
+    transform: translateX(-50%);
+    background-color: var(--nero);
+    animation: animazioneLineaNera;
+    animation-duration: 4.5s;
+    transition: 1.5s;
+}
+
+.login .animazione .nonVendenti .roundBottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 80px;
+    width: 80px;
+    opacity: 1;
+    overflow: hidden;
+    animation: animazioneRoundBottom;
+    animation-duration: 2s;
+}
+
+.login .animazione .nonVendenti .ombraRotonda {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -19px;
+    background-color: var(--nero);
+    height: 45px;
+    width: 52px;
+    box-shadow: 0 1px 11.4px 0px rgb(0 255 240), 0 4px 4px 0px rgb(0 0 0 / 25%);
+    border-radius: 50% 50% 0 0;
+}
+
+.login .animazione .nonVendenti .ombraRotonda::before {
+    width: 79px;
+    height: 36px;
+    background-color: var(--nero);
+    position: absolute;
+    content: '';
+    bottom: -17px;
+    left: -15px;
+}
+
+.login .animazione .volantari {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    box-shadow: inset 0 1px 11.4px 0px rgb(0 255 240), 0 4px 4px 0px rgb(0 0 0 / 25%);
+    animation: animazioneVolantari;
+    animation-duration: 4s;
+}
+
+.login .animazione .volantari .contenuto {
+    background-image: url(../img/scan/sfondo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    animation: animazioneContent;
+    animation-duration: 6s;
+    transition: 1s;
+    border-radius: 30px;
+}
+
+.login .animazione .volantari .contenuto .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.login .animazione .volantari .contenuto .info .titolo {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--bianco);
+}
+
+
+.login .animazione .volantari .lineaNera {
+    position: absolute;
+    width: 0;
+    left: 50%;
+    height: 15px;
+    bottom: -1px;
+    transform: translateX(-50%);
+    background-color: var(--nero);
+    animation: animazioneLineaNera;
+    animation-duration: 4.5s;
+    transition: 1.5s;
+}
+
+.login .animazione .volantari .roundBottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 80px;
+    width: 80px;
+    opacity: 1;
+    overflow: hidden;
+    animation: animazioneRoundBottom;
+    animation-duration: 2s;
+}
+
+.login .animazione .volantari .ombraRotonda {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -19px;
+    background-color: var(--nero);
+    height: 45px;
+    width: 52px;
+    box-shadow: 0 1px 11.4px 0px rgb(0 255 240), 0 4px 4px 0px rgb(0 0 0 / 25%);
+    border-radius: 0 0 50% 50%;
+}
+
+.login .animazione .volantari .ombraRotonda::before {
+    width: 79px;
+    height: 36px;
+    background-color: var(--nero);
+    position: absolute;
+    content: '';
+    top: -17px;
+    left: -15px;
+}
+
+
+@keyframes animazioneLogo {
+    0% {
+        height: 86px;
+        width: 87px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 223.3px;
+        width: 225.9px;
+        opacity: 0;
+    }
+}
+
+@keyframes animazioneCerchio {
+    0% {
+        height: 11.46px;
+        width: 11.46px;
+    }
+
+    100% {
+        height: 34.59px;
+        width: 34.59px;
+    }
+}
+
+@keyframes animazioneEllisse {
+    0% {
+        height: 67.79px;
+        width: 67.79px;
+        opacity: 1;
+        filter: blur(15px);
+    }
+
+    10% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        filter: blur(15px);
+    }
+
+    80% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        filter: blur(34px);
+    }
+
+    100% {
+        height: 67.79px;
+        width: 67.79px;
+        opacity: 1;
+        filter: blur(34px);
+    }
+}
+
+@keyframes animazioneEllisse2 {
+    0% {
+        height: 67.79px;
+        width: 67.79px;
+        opacity: 1;
+        filter: blur(44px);
+    }
+
+    10% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        filter: blur(44px);
+    }
+
+    80% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        filter: blur(60px);
+    }
+
+    100% {
+        height: 67.79px;
+        width: 67.79px;
+        opacity: 1;
+        filter: blur(60px);
+    }
+}
+
+@keyframes animazioneEllisse3 {
+    0% {
+        height: 67.79px;
+        width: 67.79px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes animazioneNonVendenti {
+    0% {
+        height: 0px;
+        width: 0;
+    }
+
+    40% {
+        height: 15px;
+        width: 0;
+    }
+
+    50% {
+        height: 15px;
+        width: 100%;
+    }
+
+    100% {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes animazioneVolantari {
+    0% {
+        height: 0px;
+        width: 0;
+    }
+
+    40% {
+        height: 15px;
+        width: 0;
+    }
+
+    50% {
+        height: 15px;
+        width: 100%;
+    }
+
+    100% {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes animazioneRoundBottom {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes animazioneLineaNera {
+    0% {
+        width: 0;
+    }
+
+    10% {
+        width: 100%;
+    }
+
+    85% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+
+@keyframes animazioneContent {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

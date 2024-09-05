@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <Title>Visual Aid</Title>
+        <link rel="icon" type="image/png" href="assets/img/logo.png" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
+        <link href="assets/css/sono.css" rel="stylesheet">
+        <link href="assets/css/profilo.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/plugins/overlayscrollbars/styles/overlayscrollbars.min.css">
+    </head>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="headerContent">
+                <p class="titolo">Profilo</p>
+                <nav class="navHeader">
+                    <ul class="navList">
+                        <li class="navArticolo">
+                            <a href="#">
+                                <img src="assets/img/icons/dataUserIcon.svg" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="mainContent">
+            <div class="container">
+                <section class="sono">
+                    <div class="sonoContent">
+                        <p class="sonoDisponible" id="testoSono">Sono disponible</p>
+                        <div class="switch attivo" onclick="enableSono();" id="switchSono">
+                            <span class="no">No</span>
+                            <span class="si">Si</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="profilo">
+                    <div class="informazione">
+                        <div class="fotoDelProfilo">
+                            <div class="lvl">Lvl. 8</div>
+                            <img src="assets/img/profilo/valerio.png" />
+                        </div>
+                        <p class="nome">Valerio</p>
+                        <p class="posizione">Aiutante Master</p>
+                    </div>
+
+                    <div class="informazioneCarta">
+                        <div class="titoloContenitore">
+                            <p class="titolo">Disponibilità e orari</p>
+                            <img class="freccia" src="assets/img/icons/freccia.svg">
+                        </div>
+                        <div class="contenuto">
+                            <div class="ellipse"></div>
+                            <img class="chart" src="assets/img/profilo/Chart.png">
+                        </div>
+                    </div>
+
+                    <div class="informazioneCarta">
+                        <div class="titoloContenitore">
+                            <p class="titolo">Bacheca trofei</p>
+                            <img class="freccia" src="assets/img/icons/freccia.svg">
+                        </div>
+                        <div class="contenuto">
+                            <div class="ellipse"></div>
+                            <div class="trofei">
+                                <img src="assets/img/profilo/goldMedal.png" />
+                                <img src="assets/img/profilo/silverMedal.png" />
+                                <img src="assets/img/profilo/bronzeMedal.png" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="contenutoFooter">
+                <div class="effettoAttivo left"></div>
+                <nav class="navFooter">
+                    <ul class="navList">
+                        <li class="navArticolo attivo">
+                            <a href="profilo.html">
+                                <img class="profilo-icon" src="assets/img/footer/profiloActive.svg" />
+                                <span>Profilo</span>
+                            </a>
+                        </li>
+                        <li class="navArticolo">
+                            <a href="aiuta.html">
+                                <img class="aiuta-Icon" src="assets/img/footer/aiuta.svg" />
+                                <span>Aiuta</span>
+                            </a>
+                        </li>
+                        <li class="navArticolo">
+                            <a href="impostazioni.html">
+                                <img class="impostazioni-Icon" src="assets/img/footer/impostazioni.svg" />
+                                <span>Impostazioni</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="assets/plugins/overlayscrollbars/browser/overlayscrollbars.browser.es5.min.js"></script>
+<script>
+    var {
+        OverlayScrollbars,
+        ScrollbarsHidingPlugin,
+        SizeObserverPlugin,
+        ClickScrollPlugin
+    } = OverlayScrollbarsGlobal;
+
+    document.addEventListener("DOMContentLoaded", () => {
+        Array.prototype.forEach.call(
+            document.querySelectorAll('body'),
+            (el) => OverlayScrollbars(el, {})
+        );
+    });
+
+    function enableSono() {
+        var switchSono = document.getElementById('switchSono');
+
+        if (switchSono.classList.contains('attivo')) {
+            switchSono.classList.remove('attivo');
+            document.getElementById('testoSono').innerText='Non sono disponibile'
+        }
+        else {
+            switchSono.classList.add('attivo');
+            document.getElementById('testoSono').innerText='Sono disponibile'
+        }
+    }
+</script>

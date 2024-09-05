@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <Title>Visual Aid</Title>
+        <link rel="icon" type="image/png" href="assets/img/logo.png" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
+        <link href="assets/css/aiuta.css" rel="stylesheet">
+        <link href="assets/css/sono.css" rel="stylesheet">
+        <link href="assets/css/preferiti.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/plugins/overlayscrollbars/styles/overlayscrollbars.min.css">
+    </head>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="headerContent">
+                <p class="titolo">Aiuta</p>
+                <nav class="navHeader">
+                    <ul class="navList">
+                        <li class="navArticolo">
+                            <a href="#">
+                                <img src="assets/img/icons/chatIcon.svg" />
+                            </a>
+                        </li>
+                        <li class="navArticolo">
+                            <a href="#">
+                                <img src="assets/img/icons/plusIcon.svg" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="mainContent">
+            <div class="container">
+                <section class="sono">
+                    <div class="sonoContent">
+                        <p class="sonoDisponible" id="testoSono">Sono disponible</p>
+                        <div class="switch attivo" onclick="enableSono();" id="switchSono">
+                            <span class="no">No</span>
+                            <span class="si">Si</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="Preferiti">
+                    <div class="titoloPreferitiContainer">
+                        <p class="titoloPreferiti">Preferiti</p>
+                        <img src="assets/img/icons/stellaIconFill.svg" />
+                    </div>
+
+                    <div class="lstUtenti">
+                        <div class="utenti blu" id="utenti_samuel" onclick="openUtenti('utenti_samuel')">
+                            <button class="visualAidPlus">
+                                VisualAid+
+                            </button>
+                            <img class="imgUtenti" src="assets/img/utenti/samuel.png" />
+                            <div class="infoUtenti">
+                                <p class="nomeUtenti">Samuel</p>
+                                <p class="posizioneUtenti">In cucina</p>
+                                <p class="titoloInfo">INFO:</p>
+                                <p class="info">Samuel è cieco al 94%, ha una allergia molto forte alle noccioline.</p>
+                                <div class="azioni">
+                                    <button class="azione">
+                                        <img src="assets/img/icons/phoneBlu.svg">
+                                    </button>
+                                    <button class="azione">
+                                        <img src="assets/img/icons/videoBlu.svg">
+                                    </button>
+                                    <button class="azione">
+                                        <img src="assets/img/icons/notaBlu.svg">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="utenti giallo" id="utenti_caterina" onclick="openUtenti('utenti_caterina')">
+                            <img class="imgUtenti" src="assets/img/utenti/caterina.png" />
+                            <div class="infoUtenti">
+                                <p class="nomeUtenti center">Caterina</p>
+                                <p class="titoloInfo">INFO:</p>
+                                <p class="info">Caterina è ipovedente medio-grave, non soffre di alcuna allergia in
+                                    particolare.</p>
+                                <div class="azioni">
+                                    <button class="azione">
+                                        <img src="assets/img/icons/micGiallo.svg">
+                                    </button>
+                                    <button class="azione">
+                                        <img src="assets/img/icons/notaGiallo.svg">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="utenti arancia" id="utenti_karl" onclick="openUtenti('utenti_karl')">
+                            <button class="visualAidPlus">
+                                VisualAid+
+                            </button>
+                            <img class="imgUtenti" src="assets/img/utenti/karl.png" />
+                            <div class="infoUtenti">
+                                <p class="nomeUtenti">Karl</p>
+                                <p class="posizioneUtenti">In salotto</p>
+                                <p class="titoloInfo">INFO:</p>
+                                <p class="info">Karl ha una lesione al chiasma ottico, ha un campo visivo molto ridotto
+                                </p>
+                                <div class="azioni">
+                                    <button class="azione">
+                                        <img src="assets/img/icons/phoneArancia.svg">
+                                    </button>
+                                    <button class="azione">
+                                        <img src="assets/img/icons/videoArancia.svg">
+                                    </button>
+                                    <button class="azione">
+                                        <img src="assets/img/icons/notaArancia.svg">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="aiutati">
+                    <div class="titoloContainer">
+                        <p class="titolo">Aiutati</p>
+                        <button class="configAiutati">
+                            <img src="assets/img/icons/configurazioneIcon.svg" />
+                        </button>
+                    </div>
+                    <div class="lstUser">
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Carlo</p>
+                                <p class="data">Aiutato il 21/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Gabriele</p>
+                                <p class="data">Aiutato il 19/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Giorgia</p>
+                                <p class="data">Aiutato il 19/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Anonimo</p>
+                                <p class="data">Aiutato il 15/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Matteo</p>
+                                <p class="data">Aiutato il 12/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Carlo</p>
+                                <p class="data">Aiutato il 10/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Anonimo</p>
+                                <p class="data">Aiutato il 9/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Sonia</p>
+                                <p class="data">Aiutato il 3/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Gabriele</p>
+                                <p class="data">Aiutato il 2/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Aurora</p>
+                                <p class="data">Aiutato il 1/07/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Vanessa</p>
+                                <p class="data">Aiutato il 25/06/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Paolo</p>
+                                <p class="data">Aiutato il 21/06/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Maria</p>
+                                <p class="data">Aiutato il 19/06/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                        <div class="utente">
+                            <div class="info">
+                                <p class="nome">Pina</p>
+                                <p class="data">Aiutato il 17/06/23</p>
+                            </div>
+                            <div class="azioni">
+                                <button class="btnPreferito">
+                                    <img src="assets/img/icons/stellaIcon.svg" />
+                                </button>
+                                <button class="btnBandiera">
+                                    <img src="assets/img/icons/bandieraIcon.svg" />
+                                </button>
+                            </div>
+                            <div class="gradiant"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="contenutoFooter">
+                <div class="effettoAttivo"></div>
+                <nav class="navFooter">
+                    <ul class="navList">
+                        <li class="navArticolo">
+                            <a href="profilo.html">
+                                <img class="profilo-icon" src="assets/img/footer/profilo.svg" />
+                                <span>Profilo</span>
+                            </a>
+                        </li>
+                        <li class="navArticolo attivo">
+                            <a href="aiuta.html">
+                                <img class="aiuta-Icon" src="assets/img/footer/aiutaActive.svg" />
+                                <span>Aiuta</span>
+                            </a>
+                        </li>
+                        <li class="navArticolo">
+                            <a href="impostazioni.html">
+                                <img class="impostazioni-Icon" src="assets/img/footer/impostazioni.svg" />
+                                <span>Impostazioni</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="assets/plugins/overlayscrollbars/browser/overlayscrollbars.browser.es5.min.js"></script>
+<script>
+    var {
+        OverlayScrollbars,
+        ScrollbarsHidingPlugin,
+        SizeObserverPlugin,
+        ClickScrollPlugin
+    } = OverlayScrollbarsGlobal;
+
+    document.addEventListener("DOMContentLoaded", () => {
+        Array.prototype.forEach.call(
+            document.querySelectorAll('body'),
+            (el) => OverlayScrollbars(el, {})
+        );
+    });
+
+    function openUtenti(id) {
+        if (document.getElementById(id).classList.contains('attivo')) {
+            document.getElementById(id).classList.remove('attivo');
+        }
+        else {
+            let lstUtenti = document.querySelectorAll('.utenti');
+
+            for (var i = 0; i < lstUtenti.length; i++) {
+                lstUtenti[i].classList.remove('attivo');
+            }
+
+            document.getElementById(id).classList.add('attivo');
+        }
+    }
+
+    function enableSono() {
+        var switchSono = document.getElementById('switchSono');
+
+        if (switchSono.classList.contains('attivo')) {
+            switchSono.classList.remove('attivo');
+            document.getElementById('testoSono').innerText='Non sono disponibile'
+        }
+        else {
+            switchSono.classList.add('attivo');
+            document.getElementById('testoSono').innerText='Sono disponibile'
+        }
+    }
+</script>
